@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Medicines</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 45%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buy Medicines Online</h1>
+    </header>
+
+    <main>
+        <section class="medicine-list">
+            <h2>Available Medicines</h2>
+            <ul>
+                <li>Medicine 1</li>
+                <li>Medicine 2</li>
+                <li>Medicine 3</li>
+                <!-- Add more medicines as needed -->
+            </ul>
+        </section>
+
+        <section class="order-form">
+            <h2>Order Form</h2>
+            <form action="submit_order.php" method="POST">
+                <label for="medicine">Select Medicine:</label>
+                <select name="medicine" id="medicine">
+                    <option value="medicine1">Medicine 1</option>
+                    <option value="medicine2">Medicine 2</option>
+                    <option value="medicine3">Medicine 3</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Buy Medicines Online</p>
+    </footer>
+</body>
+</html>
